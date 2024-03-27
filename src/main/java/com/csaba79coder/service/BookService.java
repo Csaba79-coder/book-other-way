@@ -5,7 +5,7 @@ import com.csaba79coder.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookService implements BookServiceI{
+public class BookService implements BookServiceI {
 
     @Override
     public List<Book> addBook(Book addBbook, List<Book> existingBooks) {
