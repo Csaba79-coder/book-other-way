@@ -1,7 +1,6 @@
 package com.csaba79coder.bootstrap;
 
 import com.csaba79coder.model.Book;
-import com.csaba79coder.service.BookService;
 import com.csaba79coder.service.BookServiceI;
 import com.csaba79coder.util.FileHandler;
 import com.csaba79coder.util.Printer;
@@ -37,19 +36,19 @@ public class DataLoader {
 
     private static final String FILE_PATH = "src/main/resources/book_other.txt";
     private List<Book> books = FileHandler.readFileFromTxt(FILE_PATH);
-    // private static List<Book> books = FileHandler.readFileFromTxt(FILE_PATH);
+    //private static List<Book> books = FileHandler.readFileFromTxt(FILE_PATH);
 
     public void loadData() {
         Printer.printList(books);
         System.out.println("--------------");
         List<Book> modifyBooks = deleteData();
-        System.out.println(modifyBooks);
+        Printer.printList(modifyBooks);
         System.out.println("--------------");
         modifyBooks = addData();
-        System.out.println(modifyBooks);
+        Printer.printList(modifyBooks);
         System.out.println("--------------");
         modifyBooks = modifyData();
-        System.out.println(modifyBooks);
+        Printer.printList(modifyBooks);
     }
 
     public List<Book> deleteData() {
@@ -59,7 +58,7 @@ public class DataLoader {
     }
 
     public List<Book> addData() {
-        Book bookToAdd = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó",
+        Book bookToAdd = new Book("Macska a galambok között", 1, "Helikon Kiadó",
                 2020, "AC-1979", List.of("Agatha Christie"));
         return bookService.addBook(bookToAdd, getBooks());
     }

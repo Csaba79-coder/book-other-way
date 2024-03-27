@@ -181,4 +181,25 @@ public class Book {
         result = 31 * result + getAuthors().hashCode();
         return result;
     }
+
+    /*
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Book other = (Book) obj;
+        return Objects.equals(title, other.title) &&
+                Objects.equals(category, other.category) &&
+                Objects.equals(publisher, other.publisher) &&
+                Objects.equals(publicationYear, other.publicationYear) &&
+                Objects.equals(articleNumber, other.articleNumber) &&
+                Objects.equals(authors, other.authors);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitle(), getCategory(), getPublisher(),
+                getPublicationYear(), getArticleNumber(), isOnStock(), getAuthors());
+    }
+    */
 }
