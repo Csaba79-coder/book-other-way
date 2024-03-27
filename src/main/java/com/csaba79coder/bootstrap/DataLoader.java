@@ -53,18 +53,22 @@ public class DataLoader {
     }
 
     public List<Book> deleteData() {
-        Book bookToDelete = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó", 2020, "AC-1979", List.of("Agatha Christie"));
+        Book bookToDelete = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó",
+                2020, "AC-1979", List.of("Agatha Christie"));
         return bookService.deleteBook(bookToDelete, getBooks());
     }
 
     public List<Book> addData() {
-        Book bookToAdd = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó", 2020, "AC-1979", List.of("Agatha Christie"));
+        Book bookToAdd = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó",
+                2020, "AC-1979", List.of("Agatha Christie"));
         return bookService.addBook(bookToAdd, getBooks());
     }
 
     public List<Book> modifyData() {
-        Book bookToModify = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó", 2020, "AC-1979", List.of("Agatha Christie"));
-        Book bookModification = new Book("Gyilkosság az Orient expresszen", 1, "Helikon Kiadó", 2020, "AC-1979", List.of("Agatha Christie"));
+        Book bookToModify = new Book("Gyilkosság az Orient expresszen", 0, "Helikon Kiadó",
+                2020, "AC-1979", List.of("Agatha Christie"));
+        Book bookModification = new Book("Gyilkosság az Orient expresszen", 1, "Helikon Kiadó",
+                2020, "AC-1979", List.of("Agatha Christie"));
         return bookService.modifyBook(bookToModify, bookModification, getBooks());
     }
 
