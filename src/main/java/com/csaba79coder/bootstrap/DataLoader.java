@@ -10,10 +10,10 @@ import java.util.List;
 
 public class DataLoader {
 
-    BookServiceI bookService;
+    private final BookServiceI bookService;
 
-    public DataLoader() {
-        this.bookService = new BookService();
+    public DataLoader(BookServiceI bookService) {
+        this.bookService = bookService;
     }
 
     /*
